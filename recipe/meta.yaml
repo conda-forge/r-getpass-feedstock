@@ -15,7 +15,8 @@ source:
   sha256: 8cfdc7e8cabeae5dd325015d735b139d9828bd54ea8e7c2dcb636a00a153cd0f
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
 
   rpaths:
@@ -24,16 +25,16 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-rstudioapi >=0.5
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
     - r-rstudioapi >=0.5
-    - libgcc  # [not win]
 
 test:
   commands:
