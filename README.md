@@ -14,14 +14,16 @@ Summary: A micro-package for reading "passwords", i.e.  reading user input with 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-getpass-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-getpass-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-getpass-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-getpass-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-getpass-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-getpass-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-getpass-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-getpass-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-getpass-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-getpass-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-getpass-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-getpass-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-getpass/badges/version.svg)](https://anaconda.org/conda-forge/r-getpass)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-getpass/badges/downloads.svg)](https://anaconda.org/conda-forge/r-getpass)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--getpass-green.svg)](https://anaconda.org/conda-forge/r-getpass) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-getpass.svg)](https://anaconda.org/conda-forge/r-getpass) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-getpass.svg)](https://anaconda.org/conda-forge/r-getpass) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-getpass.svg)](https://anaconda.org/conda-forge/r-getpass) |
 
 Installing r-getpass
 ====================
