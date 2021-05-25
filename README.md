@@ -1,9 +1,9 @@
 About r-getpass
 ===============
 
-Home: https
+Home: https://github.com/wrathematics/getPass
 
-Package license: BSD 2-clause
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-getpass-feedstock/blob/master/LICENSE.txt)
 
@@ -169,9 +169,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 
