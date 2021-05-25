@@ -1,5 +1,4 @@
 {% set version = '0.2-2' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,52 +7,52 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: getPass_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/getPass_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/getPass/getPass_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/getPass_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/getPass/getPass_{{ version }}.tar.gz
   sha256: 8cfdc7e8cabeae5dd325015d735b139d9828bd54ea8e7c2dcb636a00a153cd0f
 
 build:
   merge_build_host: True  # [win]
   number: 1004
-  skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-rstudioapi >=0.5
-
   run:
     - r-base
+    - {{ native }}gcc-libs         # [win]
     - r-rstudioapi >=0.5
 
 test:
   commands:
-    - $R -e "library('getPass')"  # [not win]
+    - $R -e "library('getPass')"           # [not win]
     - "\"%R%\" -e \"library('getPass')\""  # [win]
 
 about:
-  home: https
-  license: BSD 2-clause
+  home: https://github.com/wrathematics/getPass
+  license: BSD-2-Clause
   summary: A micro-package for reading "passwords", i.e.  reading user input with masking, so
     that the input is not displayed as it  is typed.  Currently we have support for
     'RStudio', the command line (every OS), and any platform where 'tcltk' is present.
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause
+    - {{ environ["RECIPE_DIR"] }}/LICENSE
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
