@@ -3,6 +3,7 @@ About r-getpass-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-getpass-feedstock/blob/main/LICENSE.txt)
 
+
 About r-getpass
 ---------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/wrathematics/getPass
 Package license: BSD-2-Clause
 
 Summary: A micro-package for reading "passwords", i.e.  reading user input with masking, so that the input is not displayed as it  is typed.  Currently we have support for 'RStudio', the command line (every OS), and any platform where 'tcltk' is present.
+
 About r-getpass
 ---------------
 
@@ -167,7 +169,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
